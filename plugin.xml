@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.dawsonloudon.backgroundapi"
+    id="com.dawsonloudon.videoplayer"
     version="1.0.0">
-	<name>backgroundapi</name>
-	<description>run external api calls on a background thread</description>
+	<name>videoplayer</name>
+	<description>play video with native support for android</description>
 	<license>MIT</license>
     
-    <js-module src="www/BackgroundAPI.js" name="BackgroundAPI">
-		<clobbers target="BackgroundAPI" />
+    <js-module src="www/VideoPlayer.js" name="VideoPlayer">
+		<clobbers target="VideoPlayer" />
 	</js-module>
-    
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="BackgroundAPI">
-                <param name="ios-package" value="BackgroundAPI" />
-            </feature>
-        </config-file>
-        
-        <header-file src="src/ios/BackgroundAPI.h" />
-        <source-file src="src/ios/BackgroundAPI.m" />
-    </platform>
     
     <platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-            <feature name="BackgroundAPI" >
-                <param name="android-package" value="com.dawsonloudon.backgroundapi.BackgroundAPI"/>
+            <feature name="VideoPlayer" >
+                <param name="android-package" value="com.dawsonloudon.videoplayer.VideoPlayer"/>
             </feature>
         </config-file>
 		
 		<config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET" />
         </config-file>
-        <source-file src="src/android/BackgroundAPI.java" target-dir="src/com/dawsonloudon/backgroundapi" />
+        <source-file src="src/android/VideoPlayer.java" target-dir="src/com/dawsonloudon/videoplayer" />
 	</platform>
     
 </plugin>

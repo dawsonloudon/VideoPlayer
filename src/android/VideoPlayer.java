@@ -2,11 +2,9 @@
  * PhoneGap is available under *either* the terms of the modified BSD license *or* the
  * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
  *
- * Copyright (c) 2005-2010, Nitobi Software Inc.
- * Copyright (c) 2011, IBM Corporation
  */
 
-package com.phonegap.plugins.video;
+package com.dawsonloudon.videoplayer;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,9 +21,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
-import org.apache.cordova.api.PluginResult;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 
 public class VideoPlayer extends CordovaPlugin {
     private static final String YOU_TUBE = "youtube.com";
