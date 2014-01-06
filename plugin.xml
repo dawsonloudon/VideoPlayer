@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.dawsonloudon.backgroundapi"
+    version="1.0.0">
+	<name>backgroundapi</name>
+	<description>run external api calls on a background thread</description>
+	<license>MIT</license>
+    
+    <js-module src="www/BackgroundAPI.js" name="BackgroundAPI">
+		<clobbers target="BackgroundAPI" />
+	</js-module>
+    
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="BackgroundAPI">
+                <param name="ios-package" value="BackgroundAPI" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/BackgroundAPI.h" />
+        <source-file src="src/ios/BackgroundAPI.m" />
+    </platform>
+    
+    <platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BackgroundAPI" >
+                <param name="android-package" value="com.dawsonloudon.backgroundapi.BackgroundAPI"/>
+            </feature>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <source-file src="src/android/BackgroundAPI.java" target-dir="src/com/dawsonloudon/backgroundapi" />
+	</platform>
+    
+</plugin>
