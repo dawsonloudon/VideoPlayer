@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.dawsonloudon.videoplayer"
     version="1.0.0">
-	<name>VideoPlayer</name>
-	<description>Play video with native support for android</description>
-	<license>MIT</license>
-    <author>Dawson Loudon</author>
-    <keywords>video,android</keywords>
 
     <engines>
         <engine name="cordova" version=">=3.2.0" />
     </engines>
+
+	<name>VideoPlayer</name>
+	<description>Play video with native support for android</description>
+    <author>Dawson Loudon</author>
+    <keywords>video,android</keywords>
+	<license>MIT</license>
     
     <js-module src="www/VideoPlayer.js" name="VideoPlayer">
 		<clobbers target="VideoPlayer" />
