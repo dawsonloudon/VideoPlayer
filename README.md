@@ -8,7 +8,7 @@ Updated version of http://github.com/macdonst/VideoPlayer by Simon MacDonald
 Usages
 ===========
 
-VideoPlayer.play("http://path.to.my/video.mp4");
-VideoPlayer.play("file:///path/to/my/video.mp4");
-VideoPlayer.play("file:///android_asset/www/path/to/my/video.mp4");
-VideoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
+- VideoPlayer.play("http://path.to.my/video.mp4");
+- VideoPlayer.play("file:///path/to/my/video.mp4");
+- VideoPlayer.play("file:///android_asset/www/path/to/my/video.mp4");
+- VideoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
